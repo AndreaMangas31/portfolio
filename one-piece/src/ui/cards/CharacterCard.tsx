@@ -1,28 +1,30 @@
+import { Character } from "../../api/interfaces";
+import { CharacterDescription } from "../../features/character/components/CharcterDescription";
+import { getFolderName } from "../../shared/helpers";
+
 interface CharacterCardProps {
-  character: string;
+  character: Character;
 }
 export const CharacterCard = ({ character }: CharacterCardProps) => {
   return (
     <div className="group relative flex flex-col shadow justify-center items-center rounded-md bg-gradient-to-t from-oceanBlue-400  w-80 h-80 hover:h-72 transition-all">
+      {/* Images */}
       <img
-        alt={character}
+        alt={character.name + "_iddle"}
         className="absolute group-hover:hidden bottom-0 z-1 h-80 group-hover:h-[450px] transition-all"
-        src={`/images/characters/${character}/${character}-iddle.png`}
+        src={`/images/characters/${getFolderName(
+          character.name
+        )}/${getFolderName(character.name)}-iddle.png`}
       ></img>
       <img
-        alt={character}
+        alt={character.name + "_pose"}
         className="absolute hidden group-hover:flex bottom-0 z-1 h-80 group-hover:h-[450px] transition-all"
-        src={`/images/characters/${character}/${character}-attack.png`}
+        src={`/images/characters/${getFolderName(
+          character.name
+        )}/${getFolderName(character.name)}-attack.png`}
       ></img>
-      <div className="flex flex-col gap-4 p-2 px-4 z-2 absolute bottom-0 bg-gradient-to-t from-oceanBlue-900 text-white w-full rounded-b-md h-20 group-hover:h-40 ">
-        <span className="uppercase text-2xl group-hover:text-xl font-extrabold">
-          {character}
-        </span>
-        <span className="hidden group-hover:flex">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's.
-        </span>
-      </div>
+      {/* Description */}
+      <CharacterDescription character={character} />
     </div>
   );
 };

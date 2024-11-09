@@ -5,15 +5,18 @@ import { MainLayout } from "./ui/layouts/main-layout";
 // import "./styles/text-styles.css";
 // import "./styles/animation-styles.css";
 import "./styles/root-styles.css";
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
 
 function App() {
-  // const [count, setCount] = useState(0)
   return (
-    <MantineProvider>
-      <MainLayout>
-        <MainPage />
-      </MainLayout>
-    </MantineProvider>
+    <QueryClientProvider client={queryClient}>
+      <MantineProvider>
+        <MainLayout>
+          <MainPage />
+        </MainLayout>
+      </MantineProvider>
+    </QueryClientProvider>
   );
 }
 

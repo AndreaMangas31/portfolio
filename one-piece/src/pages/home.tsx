@@ -1,5 +1,3 @@
-// import { IconBrandCss3, IconBrandReact } from "@tabler/icons-react";
-
 import { CharacterCardSection } from "../features/CharacterCardSection";
 
 export const MainPage = () => {
@@ -18,10 +16,10 @@ export const MainPage = () => {
             className="flex z-2 absolute top-[calc(50%-250px)] left-[15%] justify-center items-center w-[1000px]   px-20 "
             src="./images/logo.png"
           ></img>
-          {/* Personajes */}
         </div>
       </section>
-      <CharacterCardSection />¡{" "}
+      {/* Nakamas */}
+      <CharacterCardSection />
     </div>
   );
 };
