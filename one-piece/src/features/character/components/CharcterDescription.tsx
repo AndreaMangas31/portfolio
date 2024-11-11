@@ -5,8 +5,8 @@ interface CharacterCardProps {
 }
 export const CharacterDescription = ({ character }: CharacterCardProps) => {
   return (
-    <div className="flex flex-col gap-4 p-2 px-4 z-2 absolute bottom-0 bg-gradient-to-t from-oceanBlue-900 text-white w-full rounded-b-md h-20 group-hover:h-40 ">
-      <span className="uppercase text-2xl group-hover:text-xl font-extrabold">
+    <div className="flex flex-col gap-4 p-2 px-4 z-2 absolute bottom-0 bg-gradient-to-t from-oceanBlue-900 group-hover:from-70% text-white w-full rounded-b-md h-20 group-hover:h-40 ">
+      <span className="uppercase text-2xl font-extrabold">
         {character.name}
       </span>
       <div className="text-lg">

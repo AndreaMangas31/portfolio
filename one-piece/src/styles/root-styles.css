@@ -1,3 +1,19 @@
 :root {
   background-color: #0ea5e9;
 }
+/* Aplica a navegadores basados en WebKit (Chrome, Safari, Edge basado en Chromium) */
+::-webkit-scrollbar {
+  width: 0px; /* Ancho del scrollbar */
+  height: 0px; /* Altura para scroll horizontal */
+  background: transparent; /* Fondo transparente para el scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Fondo transparente para el pulgar */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin; /* Hace la barra de desplazamiento más delgada */
+  scrollbar-color: transparent transparent; /* Pulgar y pista transparentes */
+}

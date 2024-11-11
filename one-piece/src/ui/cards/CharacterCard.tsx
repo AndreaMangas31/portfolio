@@ -7,7 +7,7 @@ interface CharacterCardProps {
 }
 export const CharacterCard = ({ character }: CharacterCardProps) => {
   return (
-    <div className="group relative flex flex-col shadow justify-center items-center rounded-md bg-gradient-to-t from-oceanBlue-400  w-80 h-80 hover:h-72 transition-all">
+    <div className="group relative flex flex-col shadow justify-center items-center rounded-md bg-gradient-to-t from-oceanBlue-400 min-w-80 min-h-80 hover:min-h-72 transition-all ">
       {/* Images */}
       <img
         alt={character.name + "_iddle"}
