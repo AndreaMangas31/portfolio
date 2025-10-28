@@ -10,7 +10,7 @@ export const AboutMeInfoCards = () => (
         animationDelay="1600ms"
       />
       <InfoCard
-        boldText="+2 years"
+        boldText="+4 years"
         text="of experience"
         animation="animate-grow"
         animationDelay="1000ms"
