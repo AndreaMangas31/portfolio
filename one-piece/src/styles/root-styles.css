@@ -1,5 +1,6 @@
 :root {
   background-color: #0ea5e9;
+  width: 100%;
 }
 /* Aplica a navegadores basados en WebKit (Chrome, Safari, Edge basado en Chromium) */
 ::-webkit-scrollbar {
@@ -14,6 +15,11 @@
 
 /* Firefox */
 * {
-  scrollbar-width: thin; /* Hace la barra de desplazamiento más delgada */
+  scrollbar-width: none; /* Hace la barra de desplazamiento más delgada */
   scrollbar-color: transparent transparent; /* Pulgar y pista transparentes */
 }
+
+/* html {
+  overflow: scroll;
+  overflow-x: hidden;
+} */

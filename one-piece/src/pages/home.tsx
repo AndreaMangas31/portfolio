@@ -1,6 +1,16 @@
+import { useState } from "react";
 import { CharacterCardSection } from "../features/character/views/CharacterCardSection";
 
 export const MainPage = () => {
+  const [counter, setCounter] = useState(0);
+  function addToCounter() {
+    return setCounter((prevcounter) => prevcounter + 1);
+  }
+  function minusToCounter() {
+    return setCounter((prevcounter) => prevcounter - 1);
+  }
+  console.log(counter);
+
   return (
     <div className="max-w-screen">
       <section className="flex flex-col justify-center items-center">
@@ -19,11 +29,11 @@ export const MainPage = () => {
         </div>
       </section>
       {/* Description */}
-      <section className="bg-oceanBlue-700 flex flex-col p-16">
+      <section className="bg-oceanBlue-700 flex flex-col gap-10 p-16">
         <span className="flex w-full text-start text-white text-3xl uppercase font-bold">
           What is One Piece?
         </span>
-        <div className="flex flex-row justify-between items-center gap-[300px] text-white">
+        <div className="flex flex-col lg:flex-row xl:justify-between items-center gap-20 lg:gap-[200px] text-white">
           <span className="text-xl text-justify">
             One Piece is set in a world where powerful pirates sail the seas in
             search of adventure, treasure, and, most famously, the legendary
@@ -43,6 +53,17 @@ export const MainPage = () => {
       </section>
       {/* Nakamas */}
       <CharacterCardSection />
+      <div className="relative">
+        {/* <img src="./images/luffy.png" /> */}
+        <section
+          style={{ fontSize: "100px", fontFamily: "sans-serif" }}
+          className="absolute -top-20 flex flex-row justify-center w-full"
+        >
+          <button onClick={() => addToCounter()}>+</button>
+          <p>{counter}</p>
+          <button onClick={() => minusToCounter()}>-</button>
+        </section>
+      </div>
     </div>
   );
 };
