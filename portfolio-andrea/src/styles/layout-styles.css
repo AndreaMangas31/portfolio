@@ -1,0 +1,129 @@
+body {
+  overflow: overlay;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+span {
+  font-size: 1.25rem;
+}
+
+/******** Hide scrollbar *****/
+.main-layout::-webkit-scrollbar {
+  width: 0px; /* Ajusta el ancho de la scrollbar */
+  background: transparent; /* Fondo transparente */
+}
+.main-layout {
+  scrollbar-width: thin; /* Reduce el ancho de la scrollbar */
+  scrollbar-color: transparent transparent; /* Colores transparentes para la scrollbar y el fondo */
+}
+::-webkit-scrollbar {
+  width: 0px; /* Ancho del scrollbar */
+  height: 0px; /* Altura para scroll horizontal */
+  background: transparent; /* Fondo transparente para el scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Fondo transparente para el pulgar */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none; /* Hace la barra de desplazamiento más delgada */
+  scrollbar-color: transparent transparent; /* Pulgar y pista transparentes */
+}
+
+/* Circles moving around the screen background */
+.colorful-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0; /* Detrás del contenido */
+}
+
+.blob {
+  position: absolute;
+  background: radial-gradient(circle, rgba(71, 201, 112, 0.5), transparent);
+  border-radius: 50%;
+  animation: moveBlobs 15s infinite ease-in-out;
+  opacity: 0.9;
+}
+
+.blob1 {
+  top: -10%;
+  left: -15%;
+  background: radial-gradient(circle, rgba(11, 94, 48, 0.883), transparent);
+}
+.dark .blob1 {
+  background: radial-gradient(circle, rgba(61, 189, 78, 0.6), transparent);
+}
+
+.blob2 {
+  top: 10%;
+  right: -20%;
+  background: radial-gradient(circle, rgba(11, 94, 48, 0.883), transparent);
+}
+.dark .blob2 {
+  background: radial-gradient(circle, rgba(8, 199, 94, 0.883) transparent);
+}
+
+.blob3 {
+  top: 50%;
+  left: 20%;
+  background: radial-gradient(circle, rgba(11, 94, 48, 0.883), transparent);
+}
+.dark .blob3 {
+  background: radial-gradient(circle, rgba(55, 227, 55, 0.6), transparent);
+}
+
+@keyframes moveBlobs {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(60px, -60px);
+  }
+  50% {
+    transform: translate(-60px, 60px);
+  }
+  75% {
+    transform: translate(-130px, -60px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Change background of App itselfs */
+:root {
+  --default-background-color: white;
+}
+
+.dark {
+  --default-background-color: #18171c;
+}
+
+html {
+  background-color: var(--default-background-color);
+}
+/* Change background of cards */
+.flipped-card-front {
+  background-color: #286940;
+  color: white;
+}
+.flipped-card-back {
+  background-color: #293c1f;
+  color: white;
+}
+.dark .flipped-card-front {
+  background-color: #6ef29ef0; /* Verde oscuro para modo oscuro */
+  color: black;
+}
+.dark .flipped-card-back {
+  background-color: #49a76b;
+  color: white;
+}
