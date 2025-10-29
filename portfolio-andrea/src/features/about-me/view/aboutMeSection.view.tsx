@@ -1,7 +1,7 @@
-import { GradientTitle } from "../../components/gradientText";
-import { SectionTemplate } from "../../components/templates/sectionTemplate.layout";
-import { AboutMeInfoCards } from "./aboutMeInfoCards.component";
-import { AboutMeSalutation } from "./aboutMeSalutation.component";
+import { GradientTitle } from "../../../components/gradientText";
+import { SectionTemplate } from "../../../components/templates/sectionTemplate.layout";
+import { AboutMeInfoCards } from "../components/aboutMeInfoCards.component";
+import { AboutMeSalutation } from "../components/aboutMeSalutation.component";
 
 export const AboutMeSection = () => {
   return (

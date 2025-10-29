@@ -6,7 +6,7 @@ import {
   IconExternalLink,
 } from "@tabler/icons-react";
 import { AboutMeText } from "./aboutMeText.component";
-import { goToExternalPage } from "../../utils/generalFunctions.utils";
+import { goToExternalPage } from "../../../utils/generalFunctions.utils";
 const GITHUB_URL = "https://github.com/AndreaMangas31";
 
 export const AboutMeSalutation = () => {

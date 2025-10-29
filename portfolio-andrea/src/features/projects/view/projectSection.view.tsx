@@ -1,9 +1,9 @@
 import { Tabs } from "@mantine/core";
-import { GradientTitle } from "../../components/gradientText";
-import { SectionTemplate } from "../../components/templates/sectionTemplate.layout";
+import { GradientTitle } from "../../../components/gradientText";
+import { SectionTemplate } from "../../../components/templates/sectionTemplate.layout";
 import { useState } from "react";
-import { ProjectsTabs } from "./projectsTabs.component";
-import { SkillTabs } from "./skillTabs.component";
+import { ProjectsTabs } from "../components/projectsTabs.component";
+import { SkillTabs } from "../components/skillTabs.component";
 
 export const ProjectsSection = () => {
   const [activeTab, setActiveTab] = useState<string | null>("projects");

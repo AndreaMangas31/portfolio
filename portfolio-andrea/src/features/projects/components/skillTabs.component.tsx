@@ -1,27 +1,22 @@
 import { useState, useEffect } from "react";
 import { SemiCircleProgress } from "@mantine/core";
-import { initialSoftSkills } from "./data";
+import { initialSoftSkills } from "../services/data";
 
 export const SkillTabs = () => {
   const softSkills = initialSoftSkills;
-  // Estado para manejar el valor de la barra de progreso animada
-  const [progressValues, setProgressValues] = useState(
-    softSkills.map(() => 0) // Inicializa todos los valores en 0
-  );
+  const [progressValues, setProgressValues] = useState(softSkills.map(() => 0));
 
-  // Efecto para animar el progreso
+  // Effect to animate the progress in each skill, one after another
   useEffect(() => {
     const timeouts = softSkills.map((_, index) => {
       return setTimeout(() => {
         setProgressValues((prevValues) => {
           const newValues = [...prevValues];
-          newValues[index] = softSkills[index].percentage; // Actualiza el valor con el porcentaje correspondiente
+          newValues[index] = softSkills[index].percentage;
           return newValues;
         });
-      }, 400 * index); // Agrega un pequeño retraso para cada barra de progreso
+      }, 400 * index);
     });
-
-    // Limpiar timeouts cuando el componente se desmonte
     return () => timeouts.forEach(clearTimeout);
   }, [softSkills]);
 
@@ -36,13 +31,13 @@ export const SkillTabs = () => {
             <SemiCircleProgress
               fillDirection="left-to-right"
               orientation="up"
-              transitionDuration={500} // Duración de la animación
+              transitionDuration={500}
               filledSegmentColor="rgba(61, 189, 78, 0.6)"
               size={300}
               thickness={20}
-              value={progressValues[index]} // Utiliza el valor animado
+              value={progressValues[index]}
               labelPosition="center"
-              label={`${progressValues[index]}%`} // Muestra el valor animado
+              label={`${progressValues[index]}%`}
               className="text-[30px] text-green-400"
             />
             <span className="font-bold">{skill.name}</span>

@@ -1,5 +1,5 @@
-import InfoCard from "../../components/cards/info-cards";
-import { ScrollAnimationComponent } from "../../components/templates/scrollAnimatedComponent";
+import InfoCard from "../../../components/cards/info-cards";
+import { ScrollAnimationComponent } from "../../../components/templates/scrollAnimatedComponent";
 export const AboutMeInfoCards = () => (
   <ScrollAnimationComponent>
     <div className="flex flex-wrap h-full justify-center gap-8 px-4 md:px-16 md:pl-0 lg:pr-0">
