@@ -19,7 +19,7 @@ export const AboutMeSalutation = () => {
         className="lg:opacity-0 lg:animate-typing lg:whitespace-nowrap lg:overflow-hidden text-xl sm:text-3xl font-semibold text-white-400 "
         style={{ animationDelay: "900ms" }}
       >
-        A Front-End Developer with a Passion for Design
+        A Senior Front-End Developer with a Passion for Design
       </h3>
       <div className="flex flex-col gap-4  items-center px-8">
         <AboutMeText />

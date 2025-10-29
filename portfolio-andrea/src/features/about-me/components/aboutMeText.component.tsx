@@ -4,12 +4,15 @@ export const AboutMeText = () => (
     style={{ animationDelay: "2500ms" }}
   >
     <article className="text-justify text-lg">
-      I am dedicated developer with a passion for creating seamless and engaging
-      user experiences. With expertise in <strong>React</strong>,{" "}
-      <strong>Vue.js</strong>, <strong>JavaScript</strong>,{" "}
-      <strong>TypeScript</strong>, <strong>HTML</strong>, and{" "}
-      <strong>CSS</strong>, I specialize in turning ideas into reality through
-      intuitive and responsive design. My professional journey is defined by:
+      I am a dedicated developer and team leader with a passion for creating
+      seamless and engaging user experiences. With expertise in{" "}
+      <strong>React</strong>, <strong>Vue.js</strong>,{" "}
+      <strong>JavaScript</strong>, <strong>TypeScript</strong>,{" "}
+      <strong>HTML</strong>, and <strong>CSS</strong>, I specialize in turning
+      ideas into reality through intuitive and responsive design. Currently, I
+      lead a team of talented developers — mainly focused on{" "}
+      <strong>front-end</strong> — ensuring quality, consistency, and innovation
+      across projects. My professional journey is defined by:
       <ul className="list-disc pl-10 py-4">
         <li>
           Crafting scalable, maintainable, and accessible components following
@@ -25,14 +28,7 @@ export const AboutMeText = () => (
           <strong>accessibility</strong> (WCAG standards), and{" "}
           <strong>user satisfaction</strong>.
         </li>
-        {/* <li>
-          Creative <strong>problem-solving</strong> and critical thinking to
-          tackle challenges effectively.
-        </li> */}
       </ul>
-      {/* Whether you're looking to enhance an existing product or build something
-      groundbreaking, I bring a blend of technical expertise and creativity to
-      help achieve your goals.*/}{" "}
       Let’s create something extraordinary together!
     </article>
   </div>
