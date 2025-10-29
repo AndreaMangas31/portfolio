@@ -1,7 +1,10 @@
-const CodingDesign = () => (
-  <div>
-    <h1>Coding & Design</h1>
-  </div>
-);
+import { GradientTitle } from "../components/gradientText";
+import { SectionTemplate } from "../components/templates/sectionTemplate.layout";
 
-export default CodingDesign;
+export const CodingDesign = () => (
+  <main>
+    <SectionTemplate>
+      <GradientTitle text="Coding & Design" />
+    </SectionTemplate>
+  </main>
+);

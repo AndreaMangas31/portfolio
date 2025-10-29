@@ -1,9 +1,9 @@
 import { ComponentType } from "react";
 import { MainPage } from "../src/pages/main-page.page";
-import Experience from "../src/pages/experience.page";
-import MultimediaEngineering from "../src/pages/multimedia-engineering.page";
-import WorkExperiences from "../src/pages/work-experiences.page";
-import CodingDesign from "../src/pages/coding-design.page";
+import { Experience } from "../src/pages/experience.page";
+import { MultimediaEngineering } from "../src/pages/multimedia-engineering.page";
+import { WorkExperiences } from "../src/pages/work-experiences.page";
+import { CodingDesign } from "../src/pages/coding-design.page";
 
 interface RouteConfig {
   path: string;

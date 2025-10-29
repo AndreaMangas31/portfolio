@@ -3,7 +3,7 @@ import { ProjectsSection } from "../features/projects/view/projectSection.view";
 
 export const MainPage = () => {
   return (
-    <section className="flex flex-col bg-white dark:bg-dark-background w-full  h-full  justify-center items-center overflow-hidden">
+    <main className="flex flex-col bg-white dark:bg-dark-background w-full  h-full  justify-center items-center overflow-hidden">
       {/* <section className="bg-white dark:bg-dark-background h-full flex justify-center items-center overflow-hidden"> */}
       {/* Main */}
       <div className="relative w-full min-h-screen flex justify-center items-center">
@@ -29,6 +29,6 @@ export const MainPage = () => {
       {/* Projects */}
       <ProjectsSection />
       {/* Contact */}
-    </section>
+    </main>
   );
 };

@@ -1,7 +1,10 @@
-const WorkExperiences = () => (
-  <div>
-    <h1>Work Experiences</h1>
-  </div>
-);
+import { GradientTitle } from "../components/gradientText";
+import { SectionTemplate } from "../components/templates/sectionTemplate.layout";
 
-export default WorkExperiences;
+export const WorkExperiences = () => (
+  <main>
+    <SectionTemplate>
+      <GradientTitle text="Work Experiences" />
+    </SectionTemplate>
+  </main>
+);

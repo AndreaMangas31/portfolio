@@ -1,6 +1,7 @@
-import { Button } from "@mantine/core";
+import { Button, Tooltip } from "@mantine/core";
 // import { useEffect, useState } from "react";
 import { IconSun, IconMoonStars } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
@@ -8,8 +9,15 @@ interface HeaderProps {
 }
 export const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
   return (
-    <div className="fixed top-0 h-20 flex justify-between w-full px-8 dark:text-white backdrop-blur-lg	 text-lg py-8 z-50">
-      <span>Andrea Mangas</span>
+    <div className="fixed top-0 h-20 items-center flex justify-between w-full px-8 dark:text-white backdrop-blur-lg	 text-lg py-8 z-50">
+      <Tooltip position="bottom" withArrow offset={5} label="Go to home page">
+        <Link
+          to="/"
+          className="flex h-fit hover:animate-pulse items-start !my-0 !p-0"
+        >
+          <span>Andrea Mangas</span>
+        </Link>
+      </Tooltip>
       <div className="flex flex-row justify-around items-center gap-6">
         <span>My proyects</span>
         <span>About Me</span>
