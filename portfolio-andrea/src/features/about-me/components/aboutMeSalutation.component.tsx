@@ -16,8 +16,8 @@ export const AboutMeSalutation = () => {
         Hello, I am Andrea Mangas
       </h2>
       <h3
-        className="lg:opacity-0 lg:animate-typing lg:whitespace-nowrap lg:overflow-hidden text-xl sm:text-3xl font-semibold text-white-400 "
-        style={{ animationDelay: "900ms" }}
+        className="lg:opacity-0 lg:animate-typing lg:whitespace-nowrap lg:overflow-hidden text-xl sm:text-3xl font-semibold text-white-400 lg:transition-opacity lg:duration-5000 "
+        style={{ animationDelay: "200ms" }}
       >
         A Senior Front-End Developer with a Passion for Design
       </h3>

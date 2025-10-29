@@ -1,7 +1,7 @@
 export const AboutMeText = () => (
   <div
     className="flex flex-col items-center opacity-0 animate-fadeIn "
-    style={{ animationDelay: "2500ms" }}
+    style={{ animationDelay: "1500ms" }}
   >
     <article className="text-justify text-lg">
       I am a dedicated developer and team leader with a passion for creating

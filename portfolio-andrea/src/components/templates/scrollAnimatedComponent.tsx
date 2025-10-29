@@ -20,7 +20,7 @@ export const ScrollAnimationComponent: React.FC<
           }
         });
       },
-      { threshold: 0.5 } // The section will be considered "in view" when 50% is visible
+      { threshold: 0.1 } // The section will be considered "in view" when 10% is visible
     );
 
     if (sectionRef.current) {
