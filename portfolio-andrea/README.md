@@ -56,8 +56,3 @@ https://portfolio-cj62l73va-andreamangas31s-projects.vercel.app
 - Crear una rama por feature: `git checkout -b feat/nombre`
 - Hacer PR y describir cambios
 - Mantener el estilo de código y TypeScript estricto
-
-## Licencia
-- Añadir licencia en `LICENSE` según corresponda (p. ej. MIT)
-
-Notas: si quieres, puedo generar un README más detallado (secciones técnicas, comandos personalizados, checklist de despliegue) o actualizar el archivo `data.ts` con contenido nuevo.
