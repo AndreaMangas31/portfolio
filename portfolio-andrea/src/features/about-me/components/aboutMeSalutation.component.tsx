@@ -29,13 +29,15 @@ export const AboutMeSalutation = () => {
             <IconBrandCss3 stroke={0.5} size={60} className="mt-12" />
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button
-              className="flex gap-8 dark:bg-green-400  dark:hover:bg-green-400 dark:hover:text-black dark:hover:brightness-75 dark:text-black text-sm hover:bg-green-600 bg-green-700 hover:text-white"
-              aria-label="Download Andrea's CV"
-            >
-              <span className=" text-md">Download CV</span>
-              <IconDownload size={20} className="ml-2" />
-            </Button>
+            <a href="/CV_AndreaMangas.pdf" download>
+              <Button
+                className="flex gap-8 dark:bg-green-400 dark:hover:bg-green-400 dark:hover:text-black dark:hover:brightness-75 dark:text-black text-sm hover:bg-green-600 bg-green-700 hover:text-white"
+                aria-label="Download Andrea's CV"
+              >
+                <span className="text-md">Download CV</span>
+                <IconDownload size={20} className="ml-2" />
+              </Button>
+            </a>
             <Button
               className="flex flex-row gap-4 dark:bg-black border dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 hover:bg-green-400/10 brightness-120 dark:hover:bg-gray-800  dark:hover:brightness-120 hover:text-green-700 text-sm border-green-700 text-green-700 bg-white"
               onClick={(e) => {

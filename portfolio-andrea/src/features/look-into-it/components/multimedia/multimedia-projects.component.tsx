@@ -36,8 +36,18 @@ export const MultimediaProjects = () => {
           </li>
         </ul>
       </div>
-      {/* TODO: Add image in education projects */}
-      <img src="#" alt="Education Projects" />
+      <a
+        href="/laSalle-education.png"
+        target="_blank"
+        rel="noreferrer"
+        className="w-full h-60"
+      >
+        <img
+          src="/laSalle-education.png"
+          alt="Education Projects"
+          className="w-fit h-60 "
+        />
+      </a>
     </section>
   );
 };

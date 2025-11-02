@@ -1,6 +1,7 @@
 import { sectionStyle, listStyle } from "../../utils/styles";
 
 export const MultimediaTFG = () => {
+  const drivelink = import.meta.env.VITE_DRIVE_TFG_LINK || "";
   return (
     <section className={sectionStyle}>
       <div className="flex flex-wrap text-justify">
@@ -55,8 +56,14 @@ export const MultimediaTFG = () => {
           </li>
         </ul>
       </div>
-      {/* TODO: Add image in final degree project */}
-      <img src="#" alt="Final Degree Project" />
+      <div className="group relative flex flex-col justify-center items-center">
+        <a href={drivelink} target="_blank" rel="noopener noreferrer">
+          <img src="/tfg-image.png" alt="Final Degree Project" />
+          <div className="absolute flex top-0 left-0 group-hover:h-full transition-all justify-center items-center w-full h-30 green-button">
+            Click to see a preview
+          </div>
+        </a>
+      </div>
     </section>
   );
 };

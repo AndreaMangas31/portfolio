@@ -1,9 +1,8 @@
 import { ComponentType } from "react";
 import { MainPage } from "../src/pages/main-page.page";
-import { Experience } from "../src/pages/experience.page";
 import { MultimediaEngineering } from "../src/pages/multimedia-engineering.page";
-import { WorkExperiences } from "../src/pages/work-experiences.page";
 import { CodingDesign } from "../src/pages/coding-design.page";
+import { Experience } from "../src/pages/experience.page";
 
 interface RouteConfig {
   path: string;
@@ -22,10 +21,6 @@ export const routeViews: Record<string, RouteConfig> = {
   experience: {
     path: "/experience",
     element: Experience,
-  },
-  workExperiences: {
-    path: "/work-experiences",
-    element: WorkExperiences,
   },
   codingDesign: {
     path: "/coding-design",
