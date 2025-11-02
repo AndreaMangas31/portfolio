@@ -11,7 +11,7 @@ export const CollapsableCard = ({ card, isExpanded }: CollapsableCardProps) => {
   const hasVideos = card?.shortVideo && card.shortVideo?.length > 0;
   return (
     <div
-      className={`flex group  bg-gray-800/40 shadow-md h-full rounded-lg border border-gray-600 group-hover:shadow-2xl group-hover:shadow-green-400/40  group-hover:border-green-700 group-hover:border-2 group-hover:scale-105 ${
+      className={`flex group bg-slate-200  dark:bg-gray-800/40 shadow-md h-full rounded-lg border border-gray-600 group-hover:shadow-2xl group-hover:shadow-green-400/40  group-hover:border-green-700 group-hover:border-2 group-hover:scale-105 ${
         isExpanded ? "flex-row" : "flex-col"
       }`}
       style={{
@@ -28,8 +28,10 @@ export const CollapsableCard = ({ card, isExpanded }: CollapsableCardProps) => {
       />
       {/* Text content */}
       <div className="flex flex-col gap-4 p-4">
-        <h2 className={`text-lg font-bold mb-2 text-white `}>{card.name}</h2>
-        <p className={`text-gray-400 ${!isExpanded && "line-clamp-2"}`}>
+        <h2 className={`text-lg font-bold mb-2 dark:text-white `}>
+          {card.name}
+        </h2>
+        <p className={`dark:text-gray-400 ${!isExpanded && "line-clamp-2"}`}>
           {card.description}
         </p>
         {isExpanded && (

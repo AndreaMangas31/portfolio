@@ -10,7 +10,7 @@ export const InterestsTabs = () => {
         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
           What Drives Me
         </h2>
-        <p className="text-gray-400 mt-2">
+        <p className="dark:text-gray-400 mt-2">
           A few areas I’m truly passionate about — inside and outside of code.
         </p>
       </div>
@@ -27,7 +27,7 @@ export const InterestsTabs = () => {
               shadow="md"
               radius="md"
               withBorder
-              className="bg-zinc-900/60 backdrop-blur-md border-zinc-700/60 hover:border-green-400/50 hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300 min-h-[150px]"
+              className="bg-white dark:bg-zinc-900/60 backdrop-blur-md border-green-600 dark:border-zinc-700/60 hover:border-green-400/50 hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300 min-h-[150px]"
             >
               <Group mb="sm">
                 <Badge
@@ -40,7 +40,7 @@ export const InterestsTabs = () => {
                 </Badge>
               </Group>
 
-              <Text className="text-gray-300 text-sm leading-relaxed">
+              <Text className="dark:text-gray-300 text-sm leading-relaxed">
                 {interest.description}
               </Text>
             </Card>

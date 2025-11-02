@@ -71,9 +71,9 @@ export const SkillTabs = () => {
               aria-valuenow={progressValues[index]}
               aria-valuemin={0}
               aria-valuemax={100}
-              className="text-[28px] text-green-400 select-none"
+              className="text-[28px] dark:text-green-400 select-none"
             />
-            <span className="font-semibold text-gray-200 tracking-wide text-lg">
+            <span className="font-semibold dark:text-gray-200 tracking-wide text-lg">
               {skill.name}
             </span>
           </motion.li>
