@@ -19,9 +19,9 @@ export const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
         </Link>
       </Tooltip>
       <div className="flex flex-row justify-around items-center gap-6">
-        <span>My proyects</span>
+        {/* <span>My proyects</span>
         <span>About Me</span>
-        <span>Contact</span>
+        <span>Contact</span> */}
         <Button
           className="flex justify-center items-center cursor-pointer bg-transparent hover:bg-gray-200/20  h-10"
           style={{

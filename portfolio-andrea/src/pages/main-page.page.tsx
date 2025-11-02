@@ -19,7 +19,7 @@ export const MainPage = () => {
         <div className={`absolute bottom-0 left-[1/2 - 0.5] z-10`}>
           <img
             className="w-[500px] h-[700px]"
-            src="../anime-portrait.png"
+            src="../my-anime-portrait.png"
             alt="icon-representation-about-me"
           ></img>
         </div>
