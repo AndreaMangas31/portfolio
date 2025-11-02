@@ -2,6 +2,9 @@
 
 Proyecto frontend que muestra cartas de personajes de One Piece. Construido con Vite + React + TailwindCSS. Consume la API pública (documentación: https://api-onepiece.com/en/documentation).
 
+# Deployment
+https://one-piece-landing.vercel.app/
+
 ## Tecnologías
 - React
 - Vite
