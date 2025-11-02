@@ -51,8 +51,3 @@ https://portfolio-cj62l73va-andreamangas31s-projects.vercel.app
 ## Despliegue
 - Plataformas recomendadas: Vercel, Netlify
 - Configurar build command: `pnpm build` y carpeta de salida `dist`
-
-## Contribuir
-- Crear una rama por feature: `git checkout -b feat/nombre`
-- Hacer PR y describir cambios
-- Mantener el estilo de código y TypeScript estricto
