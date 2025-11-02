@@ -7,6 +7,10 @@ export default {
       colors: {
         "dark-background": "#18171c",
       },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
+        heading: ['"Momo Trust Display"', "sans-serif"],
+      },
       maxWidth: {
         "8xl": "96rem",
         "9xl": "112rem",

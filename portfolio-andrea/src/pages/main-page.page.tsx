@@ -7,11 +7,11 @@ export const MainPage = () => {
       {/* <section className="bg-white dark:bg-dark-background h-full flex justify-center items-center overflow-hidden"> */}
       {/* Main */}
       <div className="relative w-full min-h-screen flex justify-center items-center">
-        <div className="text-slide-wrapper text-black dark:text-white gap-4 z-2 ">
-          <h1 style={{ fontSize: "25rem" }} className=" text-slide px-4 ">
+        <div className="text-slide-wrapper !font-heading text-black dark:text-white gap-4 z-2 ">
+          <h1 style={{ fontSize: "20rem" }} className=" text-slide px-4 ">
             FRONT-END DEVELOPER{" "}
           </h1>
-          <h1 style={{ fontSize: "25rem" }} className=" text-slide">
+          <h1 style={{ fontSize: "20rem" }} className=" text-slide">
             {" "}
             FRONT-END DEVELOPER{" "}
           </h1>
