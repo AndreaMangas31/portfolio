@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useGetCharacterByName } from "../features/character/hooks/useGetCharacterByName.hook";
 import { LoadingState } from "../ui/states/loadingState";
 import { ErrorState } from "../ui/states/errorState";
 import { getFolderName } from "../shared/helpers";
 
 export const CharacterDetailPage = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { data: character, isLoading, error } = useGetCharacterByName(id);
 
@@ -14,10 +15,19 @@ export const CharacterDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-oceanBlue-900 to-oceanBlue-700">
+      <button
+        onClick={() => navigate("/")}
+        className="fixed top-8 left-8 z-50 flex items-center gap-2 px-4 py-2 text-white 
+          bg-oceanBlue-800/80 hover:bg-oceanBlue-700 rounded-lg backdrop-blur-sm
+          transform transition-all duration-300 hover:scale-105 hover:shadow-lg
+          border border-white/20"
+      >
+        <span>{`<   Return to Crew`}</span>
+      </button>
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Main info */}
         <div className="relative rounded-lg overflow-hidden mb-8 h-[40vh]">
-          <div className="absolute inset-0 bg-black/50 z-10" />
+          <div className="absolute inset-0 bg-black/20 z-10" />
           <div className="flex w-full justify-end">
             <img
               alt={character.name + "_pose"}
@@ -25,6 +35,9 @@ export const CharacterDetailPage = () => {
               src={`/images/characters/${getFolderName(
                 character.name
               )}/${getFolderName(character.name)}-attack.png`}
+              style={{
+                filter: "drop-shadow(0 -6mm 4mm #0ea5e9)",
+              }}
             />
           </div>
           <div className="absolute bottom-0 left-0 right-0 z-20 p-8">
@@ -38,8 +51,8 @@ export const CharacterDetailPage = () => {
         {/* Speacil info */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* basic */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 space-y-4">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="flex flex-col gap-4 bg-white backdrop-blur-sm rounded-lg p-6 ">
+            <h2 className="text-2xl font-bold text-oceanBlue-800">
               Basic Information
             </h2>
             <InfoItem label="Size" value={character.size} />
@@ -50,8 +63,10 @@ export const CharacterDetailPage = () => {
           </div>
 
           {/* Crew */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-white mb-4">Crew Details</h2>
+          <div className="flex flex-col gap-4 bg-white backdrop-blur-sm rounded-lg p-6">
+            <h2 className="text-2xl font-bold text-oceanBlue-800 ">
+              Crew Details
+            </h2>
             <div className="space-y-4">
               <InfoItem label="Crew Name" value={character.crew.name} />
               <InfoItem label="Position" value={character.crew.number} />
@@ -74,8 +89,10 @@ export const CharacterDetailPage = () => {
           </div>
 
           {/* devil fruit */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-white mb-4">Devil Fruit</h2>
+          <div className="flex flex-col gap-4 bg-white backdrop-blur-sm rounded-lg p-6">
+            <h2 className="text-2xl font-bold text-oceanBlue-800 ">
+              Devil Fruit
+            </h2>
             {character.fruit ? (
               <div className="space-y-4">
                 <InfoItem label="Name" value={character.fruit.name} />
@@ -99,7 +116,9 @@ export const CharacterDetailPage = () => {
 
 const InfoItem = ({ label, value }: { label: string; value: string }) => (
   <div>
-    <dt className="text-sm font-medium text-white/60">{label}</dt>
-    <dd className="mt-1 text-lg text-white">{value}</dd>
+    <p className="text-sm font-medium text-oceanBlue-600/60">{label}</p>
+    <span className="mt-1 text-lg text-oceanBlue-600">
+      {value ? value : "NA"}
+    </span>
   </div>
 );
