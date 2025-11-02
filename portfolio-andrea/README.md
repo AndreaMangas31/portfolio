@@ -2,7 +2,7 @@
 
 Proyecto: portfolio personal construido con React + TypeScript + Vite y TailwindCSS. Muestra secciones de experiencia, proyectos, intereses y multimedia.
 # Despliegue
-https://portfolio-cj62l73va-andreamangas31s-projects.vercel.app
+https://portfolio-six-lovat-76.vercel.app/
 
 ## Tecnologías
 - React + TypeScript
