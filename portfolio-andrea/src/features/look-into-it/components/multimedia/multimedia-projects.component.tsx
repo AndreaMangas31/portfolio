@@ -37,7 +37,7 @@ export const MultimediaProjects = () => {
         </ul>
       </div>
       <a
-        href="/laSalle-education.png"
+        href="https://www.salleurl.edu/es/estudios/grado-en-ingenieria-multimedia-mencion-en-videojuegos"
         target="_blank"
         rel="noreferrer"
         className="w-full h-60"

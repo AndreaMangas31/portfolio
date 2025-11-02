@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# Portfolio - Andrea
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto: portfolio personal construido con React + TypeScript + Vite y TailwindCSS. Muestra secciones de experiencia, proyectos, intereses y multimedia.
+# Despliegue
+https://portfolio-cj62l73va-andreamangas31s-projects.vercel.app
 
-Currently, two official plugins are available:
+## Tecnologías
+- React + TypeScript
+- Vite
+- TailwindCSS
+- PNPM (gestor de paquetes)
+- Estructura modular por features y componentes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requisitos
+- Node.js (recomendado >= 16)
+- pnpm instalado (https://pnpm.io/)
 
-## Expanding the ESLint configuration
+## Instalación (Mac)
+1. Clonar repositorio
+   - git clone <repo-url>
+2. Abrir carpeta del proyecto
+   - cd /Users/andream31/Desktop/portfolio/portfolio-andrea
+3. Instalar dependencias
+   - pnpm install
+4. Ejecutar en modo desarrollo
+   - pnpm dev
+   - Por defecto Vite sirve en http://localhost:5173
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Scripts útiles
+- pnpm dev — modo desarrollo
+- pnpm build — construir para producción
+- pnpm preview — vista previa del build local
+- pnpm lint — (si está configurado en package.json)
 
-- Configure the top-level `parserOptions` property like this:
+## Estructura principal
+- src/
+  - assets/ — imágenes y recursos
+  - components/ — componentes reutilizables (cards, header, footer)
+  - features/
+    - projects/ — datos, interfaces y vistas de proyectos
+      - services/data.ts — donde actualizar los proyectos y skills
+    - about-me/, contact/, look-into-it/ — secciones del sitio
+  - layouts/, pages/ — enrutado y plantillas
+  - styles/ — estilos Tailwind y CSS adicionales
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ¿Dónde editar contenido?
+- Proyectos: `src/features/projects/services/data.ts`
+- Experiencias: `src/features/projects/services/data.ts` y `src/features/projects/services/interfaces.ts`
+- Texto y secciones: archivos dentro de `src/features/*/view` y `src/features/*/components`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Despliegue
+- Plataformas recomendadas: Vercel, Netlify
+- Configurar build command: `pnpm build` y carpeta de salida `dist`
