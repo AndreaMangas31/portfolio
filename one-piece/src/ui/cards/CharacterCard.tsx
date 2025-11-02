@@ -1,14 +1,22 @@
+import { useNavigate } from "react-router-dom";
 import { Character } from "../../api/interfaces";
 import { CharacterDescription } from "../../features/character/components/CharcterDescription";
-import { getFolderName } from "../../shared/helpers";
+import { formatCharacterName, getFolderName } from "../../shared/helpers";
 
 interface CharacterCardProps {
   character: Character;
 }
 export const CharacterCard = ({ character }: CharacterCardProps) => {
+  const navigate = useNavigate();
+
+  const visitDetails = () => {
+    const formattedName = formatCharacterName(character.name.toLowerCase());
+    navigate(`/character/${formattedName}`);
+  };
   return (
     <div
       id={"card_" + character.name}
+      onClick={visitDetails}
       className="group relative flex flex-col shadow justify-center items-center rounded-md bg-gradient-to-t from-oceanBlue-400 min-w-80 min-h-80 hover:from-oceanBlue-600 hover:min-h-72 transition-all cursor-pointer"
     >
       {/* Images */}

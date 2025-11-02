@@ -1,19 +1,31 @@
+import { useEffect, useState } from "react";
 import { CharacterCardSection } from "../features/character/views/CharacterCardSection";
 
 export const MainPage = () => {
+  const [logoVisible, setLogoVisible] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLogoVisible(true), 120); // pequeño delay para animación
+    return () => clearTimeout(t);
+  }, []);
   return (
     <div className="max-w-screen">
       <section className="flex flex-col justify-center items-center">
         <div className="relative h-full w-full">
           <img
             alt="background"
-            className="h-full w-full z-1 object-cover blur-xs"
+            className="h-full w-full z-1 object-cover blur-xs "
             src="./images/background.png"
           ></img>
           {/* Colocar una animación de aparición del logo */}
           <img
             alt="logo"
-            className="flex z-2 absolute top-[calc(50%-250px)] left-[15%] justify-center items-center w-[1000px]   px-20 "
+            className={
+              "absolute top-[20%] lg:top-[calc(50%-250px)] lg:left-[15%] justify-center items-center w-[1000px] px-20 transform transition-all duration-700 ease-out will-change-transform " +
+              (logoVisible
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-40 opacity-0")
+            }
             src="./images/logo.png"
           ></img>
         </div>

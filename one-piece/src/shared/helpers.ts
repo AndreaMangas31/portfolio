@@ -21,3 +21,16 @@ export function getFolderName(apiName: string): string {
   }
   return "";
 }
+
+//this function formats character names for URL usage
+export const formatCharacterName = (name: string): string => {
+  return name.toLowerCase().replace(/\s+/g, "-");
+};
+
+//this function deformats character names for api usage
+export const deformatCharacterName = (formattedName: string): string => {
+  return formattedName
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};

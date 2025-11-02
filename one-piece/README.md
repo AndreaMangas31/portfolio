@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# One Piece - Character Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto frontend que muestra cartas de personajes de One Piece. Construido con Vite + React + TailwindCSS. Consume la API pública (documentación: https://api-onepiece.com/en/documentation).
 
-## Available Scripts
+## Tecnologías
+- React
+- Vite
+- TailwindCSS
+- JavaScript / TypeScript (según archivos del proyecto)
+- fetch / Axios para llamadas HTTP
 
-In the project directory, you can run:
+## Demo
+(Usar la build en `public/` o `build/` para desplegar estático)
 
-### `npm start`
+## Instalación (macOS)
+1. Clonar repositorio
+   - git clone <repo-url>
+2. Entrar al proyecto
+   - cd /Users/andream31/Desktop/portfolio/one-piece
+3. Instalar dependencias
+   - pnpm install
+4. Ejecutar en modo desarrollo
+   - pnpm dev
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Scripts útiles
+- pnpm dev — arranca el servidor de desarrollo
+- pnpm build — crear build de producción
+- pnpm preview — servir la carpeta build localmente
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estructura principal
+- src/
+  - api/ — cliente API e interfaces (p. ej. apiClient.ts)
+  - features/ — lógica y vistas por feature (character)
+  - ui/ — componentes reutilizables (cards, layouts)
+  - styles/ — estilos globales
+- public/ — assets públicos
+- build/ — contenido de build (si existe)
 
-### `npm test`
+## Integración con la API (resumen)
+La documentación oficial está en: https://api-onepiece.com/en/documentation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Recomendaciones generales:
+- Configurar base URL en variables de entorno (Vite usa import.meta.env):
+  - Crear `.env` o `.env.local`:
+    VITE_API_BASE=https://api-onepiece.com
 
-### `npm run build`
+Ejemplo usando fetch (simple):
+```javascript
+const BASE = import.meta.env.VITE_API_BASE || "https://api-onepiece.com";
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+async function fetchCharacters() {
+  const res = await fetch(`${BASE}/characters`);
+  if (!res.ok) throw new Error("Error al obtener personajes");
+  return res.json();
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ejemplo usando axios:
+```javascript
+import axios from "axios";
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE || "https://api-onepiece.com",
+  // headers: { Authorization: `Bearer ${import.meta.env.VITE_API_KEY}` } // si aplica
+});
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export const getCharacters = () => api.get("/characters");
+```
 
-### `npm run eject`
+Nota: revisar la documentación oficial para rutas exactas, parámetros de búsqueda, paginación y autenticación.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Buenas prácticas
+- Usa import.meta.env para claves y base URL.
+- Maneja errores y estados de carga en hooks (ver `src/features/character/hooks`).
+- Cachea respuestas cuando sea conveniente (SW, React Query u otro).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Despliegue
+- Generar build: `pnpm build`
+- Subir `dist/` o `build/` a Netlify / Vercel / GitHub Pages
+- Asegurar variables de entorno en la plataforma de despliegue
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contribuir
+- Crear rama por feature: `git checkout -b feat/nombre`
+- Abrir PR con descripción clara
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Licencia
+Añadir archivo LICENSE según preferencia (p. ej. MIT).
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+Documentación API completa: https://api-onepiece.com/en/documentation
