@@ -2,19 +2,20 @@ import { Tabs } from "@mantine/core";
 import { GradientTitle } from "../../../components/gradientText";
 import { SectionTemplate } from "../../../components/templates/sectionTemplate.layout";
 import { useState } from "react";
-import { ProjectsTabs } from "../components/projectsTabs.component";
 import { SkillTabs } from "../components/skillTabs.component";
+import { ExperienceTabs } from "../components/experienceTabs.component";
+import { InterestsTabs } from "../components/interestsTabs.component";
 
 export const ProjectsSection = () => {
-  const [activeTab, setActiveTab] = useState<string | null>("projects");
+  const [activeTab, setActiveTab] = useState<string | null>("experience");
 
   return (
     <SectionTemplate>
       <div className="w-full text-center">
-        <GradientTitle text="Projects" />
+        <GradientTitle text="Experience & Skills" />
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full items-start md:items-center  h-full gap-8">
+      <div className="flex flex-col lg:flex-row w-full items-start md:items-center h-full gap-8">
         <Tabs
           color="green"
           radius="lg"
@@ -23,36 +24,37 @@ export const ProjectsSection = () => {
         >
           <Tabs.List>
             <Tabs.Tab
-              value="projects"
-              className={`hover:bg-green-400/50 ${activeTab === "projects" && "bg-green-400/20"}`}
+              value="experience"
+              className={`hover:bg-green-400/50 ${activeTab === "experience" && "bg-green-400/20"}`}
             >
-              My Projects
+              Experience
             </Tabs.Tab>
+
             <Tabs.Tab
               value="skills"
               className={`hover:bg-green-400/50 ${activeTab === "skills" && "bg-green-400/20"}`}
             >
               Skills
             </Tabs.Tab>
+
             <Tabs.Tab
-              value="settings"
-              className={`hover:bg-green-400/50 ${activeTab === "settings" && "bg-green-400/20"}`}
+              value="interests"
+              className={`hover:bg-green-400/50 ${activeTab === "interests" && "bg-green-400/20"}`}
             >
-              Settings
+              Interests
             </Tabs.Tab>
           </Tabs.List>
 
-          <Tabs.Panel value="projects" className=" ">
-            <ProjectsTabs />
+          <Tabs.Panel value="experience">
+            <ExperienceTabs />
           </Tabs.Panel>
 
           <Tabs.Panel value="skills">
             {activeTab === "skills" && <SkillTabs />}
           </Tabs.Panel>
 
-          <Tabs.Panel value="settings">
-            {" "}
-            <img src="/public/anime-portrait.png" alt=""></img>
+          <Tabs.Panel value="interests">
+            {activeTab === "interests" && <InterestsTabs />}
           </Tabs.Panel>
         </Tabs>
       </div>

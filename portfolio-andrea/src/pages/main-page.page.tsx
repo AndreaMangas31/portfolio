@@ -1,5 +1,5 @@
 import { AboutMeSection } from "../features/about-me/view/aboutMeSection.view";
-import { ProjectsSection } from "../features/projects/view/projectSection.view";
+import { ProjectsSection } from "../features/projects/view/experienceSection.view";
 
 export const MainPage = () => {
   return (

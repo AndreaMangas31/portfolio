@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { initialProjects } from "../services/data";
 import { CollapsableCard } from "../../../components/cards/collapsableCards";
-import { Project } from "../services/interfaces";
+import { ProjectExperience } from "../services/interfaces";
+import { professionalExperience } from "../services/data";
 
-export const ProjectsTabs = () => {
+export const ExperienceTabs = () => {
   const { projects, columns, activeIndex, handleClick, handleMouseLeave } =
-    ProjectTabsLogic();
+    ExperienceTabsLogic();
 
   return (
     <div className="w-full">
@@ -32,8 +32,10 @@ export const ProjectsTabs = () => {
     </div>
   );
 };
-const ProjectTabsLogic = () => {
-  const [projects, setProjects] = useState<Project[]>(initialProjects);
+const ExperienceTabsLogic = () => {
+  const [projects, setProjects] = useState<ProjectExperience[]>(
+    professionalExperience
+  );
   const [columns, setColumns] = useState<number>(3); // Number of columns shown in window
   const [activeIndex, setActiveIndex] = useState<number | null>(null); //The clicked card
 

@@ -127,3 +127,7 @@ html {
   background-color: #49a76b;
   color: white;
 }
+
+.green-button {
+  @apply flex gap-8 dark:bg-green-400  dark:hover:bg-green-400 dark:hover:text-black dark:hover:brightness-75 dark:text-black text-sm hover:bg-green-600 bg-green-700 hover:text-white;
+}
