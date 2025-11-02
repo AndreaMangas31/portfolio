@@ -14,7 +14,7 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
       {/* Images */}
       <img
         alt={character.name + "_iddle"}
-        className="absolute group-hover:hidden bottom-0 z-1 h-80 group-hover:h-[450px] ease-in-out duration-800 transition-all"
+        className="absolute group-hover:hidden bottom-0 z-1 h-[500px]   object-cover group-hover:h-[450px] ease-in-out duration-800 transition-all"
         src={`/images/characters/${getFolderName(
           character.name
         )}/${getFolderName(character.name)}-iddle.png`}

@@ -1,16 +1,6 @@
-import { useState } from "react";
 import { CharacterCardSection } from "../features/character/views/CharacterCardSection";
 
 export const MainPage = () => {
-  const [counter, setCounter] = useState(0);
-  function addToCounter() {
-    return setCounter((prevcounter) => prevcounter + 1);
-  }
-  function minusToCounter() {
-    return setCounter((prevcounter) => prevcounter - 1);
-  }
-  console.log(counter);
-
   return (
     <div className="max-w-screen">
       <section className="flex flex-col justify-center items-center">
@@ -33,37 +23,38 @@ export const MainPage = () => {
         <span className="flex w-full text-start text-white text-3xl uppercase font-bold">
           What is One Piece?
         </span>
-        <div className="flex flex-col lg:flex-row xl:justify-between items-center gap-20 lg:gap-[200px] text-white">
+        <div className="flex flex-col lg:flex-row xl:justify-between items-center gap-14 lg:gap-20 text-white">
           <span className="text-xl text-justify">
-            One Piece is set in a world where powerful pirates sail the seas in
-            search of adventure, treasure, and, most famously, the legendary
-            treasure known as the "One Piece." This treasure, hidden somewhere
-            in the Grand Line (an incredibly dangerous and mysterious part of
-            the world), is rumored to be left behind by the legendary Pirate
-            King, Gol D. Roger. The treasure promises unimaginable wealth,
-            power, and fame to whoever finds it, and the person who does will be
-            crowned the next Pirate King.
+            One Piece is set in a vast and vibrant world where mighty pirates,
+            fearless adventurers, and mysterious creatures roam the endless seas
+            in pursuit of dreams, glory, and freedom. At the heart of this world
+            lies the ultimate prize: the legendary treasure known as the “One
+            Piece.” Hidden somewhere deep within the Grand Line —a perilous and
+            unpredictable sea filled with strange islands, powerful enemies, and
+            countless wonders— the treasure was said to be left behind by the
+            legendary Pirate King, Gol D. Roger. Before his execution, Roger’s
+            final words ignited an era of chaos and excitement, inspiring
+            countless people across the world to take to the seas and chase
+            their own destiny. It marked the beginning of the Great Pirate Era,
+            where crews from every corner of the globe now compete, clash, and
+            form alliances in search of the treasure that promises unimaginable
+            wealth, power, and eternal fame. Whoever discovers the One Piece
+            will inherit the will of Roger himself, becoming the next Pirate
+            King —a symbol of ultimate freedom upon the seas. But the path is
+            treacherous, filled with ancient mysteries, powerful rivals, and the
+            unpredictable forces of the world’s three great powers. For those
+            daring enough to embark on this grand adventure, the sea offers both
+            danger and the chance to make history.
           </span>
           <img
             alt="treasure"
-            className="transform scale-x-[-1] w-80 "
-            src="./images/treasure.png"
+            className="transform h-[450px] object-cover"
+            src="./images/description-photo.png"
           />
         </div>
       </section>
       {/* Nakamas */}
       <CharacterCardSection />
-      <div className="relative">
-        {/* <img src="./images/luffy.png" /> */}
-        <section
-          style={{ fontSize: "100px", fontFamily: "sans-serif" }}
-          className="absolute -top-20 flex flex-row justify-center w-full"
-        >
-          <button onClick={() => addToCounter()}>+</button>
-          <p>{counter}</p>
-          <button onClick={() => minusToCounter()}>-</button>
-        </section>
-      </div>
     </div>
   );
 };
