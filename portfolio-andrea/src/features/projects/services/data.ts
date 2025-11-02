@@ -33,6 +33,17 @@ export const professionalExperience: ProjectExperience[] = [
       "/asd-post-3.png",
     ],
   },
+  {
+    id: "personal-portfolio",
+    name: "One piece landing page - early stage",
+    company: "Self-initiated",
+    role: "Front-end Developer",
+    period: "2025 - Present",
+    description:
+      "Designed and developed a landing website to showcase my skills. However, it is in early stages and I want to continue to fulfill my goal. The website is built with React and TailwindCSS, focusing on responsive design and user experience. Using an API to fetch data dynamically for scalability with API REST.",
+    link: "https://one-piece-landing.vercel.app/",
+    photo: "/one-piece-project.png",
+  },
 ];
 
 export const initialSoftSkills: Skill[] = [
