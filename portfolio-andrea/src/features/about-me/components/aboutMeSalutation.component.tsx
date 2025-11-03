@@ -29,7 +29,7 @@ export const AboutMeSalutation = () => {
             <IconBrandCss3 stroke={0.5} size={60} className="mt-12" />
           </div>
           <div className="flex flex-wrap gap-4">
-            <a href="/CV_AndreaMangas.pdf" download>
+            <a href="/AndreaMangas_2025.pdf" download>
               <Button
                 className="flex gap-8 dark:bg-green-400 dark:hover:bg-green-400 dark:hover:text-black dark:hover:brightness-75 dark:text-black text-sm hover:bg-green-600 bg-green-700 hover:text-white"
                 aria-label="Download Andrea's CV"
